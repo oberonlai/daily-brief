@@ -1,0 +1,199 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>每日外部資訊 2026-09-25</title>
+<link rel="stylesheet" href="style.css"></head><body><main><header class="site"><a href="index.html">每日外部資訊｜2026-09-25（五）</a><nav class="days"><a href="index.html">全部日期</a></nav></header><div class="toc"><a href="#x">X 熱門貼文</a><a href="#github">GitHub 熱門 × 產品點子</a><a href="#producthunt">驗證營收產品</a></div><section class="src" id="x"><h2 class="src-title">X 熱門貼文</h2><h1>X 熱門早報｜2026-09-25（五）</h1>
+<p>今天三組都有料。Google 九月垃圾內容更新開跑了，coding agent 這邊在討論砍掉無用測試和 AGENTS.md 的坑，WordPress 則在推 AEO。</p>
+<h3>1. Barry Schwartz（@rustybrick）｜SEO</h3>
+<p>Google 宣布 2026 年九月 Spam Update 已經開始全球上線，官方說大約要兩週。Barry 也補充 John Mueller 確認這次會比八月那次慢。做 SEO 和 AI 可見度的人，這兩週要盯著排名和流量波動。<br />
+<a href="https://x.com/rustybrick/status/2103185585951404396">https://x.com/rustybrick/status/2103185585951404396</a></p>
+<h3>2. Marie Haynes（@Marie_Haynes）｜SEO × AI</h3>
+<p>她示範怎麼用 Search Console 新的「multimodal searches」篩選：先匯出資料丟給 LLM，找出多模態搜尋曝光和點擊最高的頁面，再讓模型去讀這些網址。等於把 Search Console 的新篩選接進 AI 分析流程。<br />
+<a href="https://x.com/Marie_Haynes/status/2103218484687876384">https://x.com/Marie_Haynes/status/2103218484687876384</a></p>
+<h3>3. Glenn Gabe（@glenngabe）｜SEO × AI</h3>
+<p>趁這次 spam update，Glenn 重提他在 SEO for Paws 講過的 AI 可見度灌水，也就是花錢買媒體提及來拉高自己在 AI 搜尋的曝光。他在觀察這波更新會不會打到這種做法和賣這類服務的人。<br />
+<a href="https://x.com/glenngabe/status/2103209723730559291">https://x.com/glenngabe/status/2103209723730559291</a></p>
+<h3>4. Cyrus Shepard（@CyrusShepard）｜SEO</h3>
+<p>他們把 Google 排名因素專家調查裡的 103 個因素畫成一張大圖，方便一次跟客戶講清楚複雜的 SEO 概念。適合拿來當內部對照或簡報素材。<br />
+<a href="https://x.com/CyrusShepard/status/2103178665215611200">https://x.com/CyrusShepard/status/2103178665215611200</a></p>
+<h3>5. Peter Steinberger（@steipete）｜AI coding agents</h3>
+<p>OpenClaw 用一個 test-audit skill 刪掉約 40 萬行自己的測試，覆蓋率卻幾乎沒掉。他的重點是現在的模型很愛替每個小改動寫一堆沒用的測試。在做 agent 或 harness 的人很值得看這則，還有連結裡的 skill。<br />
+<a href="https://x.com/steipete/status/2103147927313199260">https://x.com/steipete/status/2103147927313199260</a></p>
+<h3>6. Peter Steinberger（@steipete）｜AI coding agents</h3>
+<p>有人發現 Claude Code 2.1.277 雖然支援 AGENTS.md，但要不要載入是由遠端的功能開關決定。如果你關掉遙測或非必要流量，本機的 AGENTS.md 會被默默略過，也不會有警告。替代做法是在 CLAUDE.md 加一行指向它。<br />
+<a href="https://x.com/steipete/status/2102889319849713698">https://x.com/steipete/status/2102889319849713698</a></p>
+<h3>7. WordPress.com（@wordpressdotcom）｜WordPress × AI／SEO</h3>
+<p>官方在談 AEO（Answer Engine Optimization，答案引擎優化），也就是讓 AI 搜尋工具更容易理解、引用和推薦你的內容，核心還是清楚的答案和好的寫作。貼文附了一篇入門說明，跟傳統 SEO 有很多重疊，經營內容站的人可以直接參考。<br />
+<a href="https://x.com/wordpressdotcom/status/2103179048901890545">https://x.com/wordpressdotcom/status/2103179048901890545</a></p>
+<h3>8. Syed Balkhi（@syedbalkhi）｜WordPress</h3>
+<p>他團隊的 ConsentLayer 推出免費的 Chrome 擴充功能 Cookie Inspector，可以看網站實際放了哪些 cookie，以及 cookie 橫幅有沒有照預期運作。檢查 WP 或電商站的隱私合規設定時很實用。<br />
+<a href="https://x.com/syedbalkhi/status/2102823210626462068">https://x.com/syedbalkhi/status/2102823210626462068</a></p></section><section class="src" id="github"><h2 class="src-title">GitHub 熱門 × 產品點子</h2><h1>GitHub Idea 早報 · 2026-09-25（台北）</h1>
+<blockquote>
+<p>訊號：GitHub Trending（日／週）＋ Search（9/20 後新建高星／MCP／WP）。非 WP 為主；今日新建爆點集中在「agent 上線／模型路由／記憶／MCP 閘道」，WP 側有 PHP agent 引擎與 AI 主題前端編輯。</p>
+</blockquote>
+<hr />
+<h2>非 WP</h2>
+<h3>1. Agent 一鍵上線 → 「自有帳號」上線 SaaS／Skill 產品</h3>
+<ul>
+<li><strong>來源</strong>：<a href="https://github.com/mikehasa/golive-skill">mikehasa/golive-skill</a>（★~847，9/23 新建）— Agent Skill＋零依賴 Node CLI：偵測 → 計畫 → 核准 → 套用 → 驗證；託管、資料庫、網域、郵件、金流走你自己的帳號，無 GoLive 後端／遙測。</li>
+<li><strong>標籤</strong>：非 WP</li>
+<li><strong>為什麼值得做</strong>：vibe coding 卡在「做得出來、上不了線」；開源 skill 把 DevOps 變成可核准步驟＝可做成代理商／獨立開發者的上線工作台。</li>
+<li><strong>構想</strong>：「GoLive Desk」— 預設 Vercel／Cloudflare／Neon／Stripe／Resend 腳本；賣「核准閘道＋稽核紀錄」給代理商；加 WP 方案：外掛 zip 建置 → 暫存站 → 正式站切換。</li>
+<li><strong>難度</strong>：中；切入：先做 detect→plan→approve 三步 Web UI，只接一個託管＋一個 DB。</li>
+</ul>
+<h3>2. 多 Agent 共用模型選單 → 模型路由／成本控管 SaaS</h3>
+<ul>
+<li><strong>來源</strong>：<a href="https://github.com/yetone/magpie">yetone/magpie</a>（★~597，9/23 新建）— 選單列統一管理每個 coding agent 的模型：Codex 跑 DeepSeek、Claude Code 跑 Kimi 等。</li>
+<li><strong>標籤</strong>：非 WP</li>
+<li><strong>為什麼值得做</strong>：團隊已同時開 Codex／Claude／Cursor；模型切換與預算是剛需，也是可白牌給主機商／顧問的切入點。</li>
+<li><strong>構想</strong>：「Model Switchboard」— 團隊政策（誰可用哪個模型、每日額度）、用量儀表；接公司 OpenRouter／自架 gateway。</li>
+<li><strong>難度</strong>：中；切入：先做本機選單列＋單一 API key 輪替，再加團隊政策。</li>
+</ul>
+<h3>3. 會學習的 Agent Memory → 長期記憶／交接 SaaS</h3>
+<ul>
+<li><strong>來源</strong>：<a href="https://github.com/vectorize-io/hindsight">vectorize-io/hindsight</a>（★~27.7k，今日 trending 約 +1.6k）— Agent Memory That Learns：記憶會隨互動進化，不只是向量堆。</li>
+<li><strong>標籤</strong>：非 WP</li>
+<li><strong>為什麼值得做</strong>：多日／多工具 agent 最大痛是失憶與交接；「可學習記憶」比單純 RAG 更可收費。</li>
+<li><strong>構想</strong>：「Agency Memory Cloud」— 客戶專案記憶隔離；WP 代理商把站況、外掛決策、客訴承諾寫進記憶，換人或換 agent 可接續。</li>
+<li><strong>難度</strong>：中高；切入：先做 SQLite／單租戶 MCP memory，驗證「換 session 仍記得承諾」。</li>
+</ul>
+<h3>4. 聊天承諾／關係記憶 → 客服／業務「首席幕僚」產品</h3>
+<ul>
+<li><strong>來源</strong>：<a href="https://github.com/georgeding/Relate">georgeding/Relate</a>（★~97，9/23 新建）— 自架 AI 聊天首席幕僚：記得對方說過什麼、你答應過什麼。</li>
+<li><strong>標籤</strong>：非 WP</li>
+<li><strong>為什麼值得做</strong>：客服與業務最貴的是漏承諾；開源「關係記憶」可垂直成電商／顧問 CRM 加值。</li>
+<li><strong>構想</strong>：「Promise Desk」— 接 LINE／Discord／郵件摘要，抽出承諾與到期；WP／Woo 訂單備註自動回寫。</li>
+<li><strong>難度</strong>：中；切入：先做「承諾抽取＋到期提醒」單頻道 MVP。</li>
+</ul>
+<h3>5. Agent↔MCP 零信任閘道 → 企業 Agent 安全層</h3>
+<ul>
+<li><strong>來源</strong>：<a href="https://github.com/Matthew0822/MCPBastion">Matthew0822/MCPBastion</a>（★~20，9/22 新建）— Agent 與 MCP 之間的零信任閘道：能力範圍、遮罩、速率／成本上限、可驗證 session log。</li>
+<li><strong>標籤</strong>：非 WP</li>
+<li><strong>為什麼值得做</strong>：企業敢接 MCP 的前提是可控；「政策＋稽核」比再多一個 MCP server 更好賣。</li>
+<li><strong>構想</strong>：「MCP Policy Hub」— 代理商／SaaS 給客戶站掛白名單工具（只讀 WP REST、禁刪庫）；月費含審計匯出。</li>
+<li><strong>難度</strong>：中；切入：先代理 3 個常見 MCP（filesystem／browser／db）＋ deny-by-default。</li>
+</ul>
+<h3>6. Prompt→透明循環 3D 圖示 → 品牌資產／區塊素材產品</h3>
+<ul>
+<li><strong>來源</strong>：<a href="https://github.com/samyost1/3dicon">samyost1/3dicon</a>（★~380，9/23 新建）— Claude Code skill：一句 prompt 產出可循環動畫、真透明背景的 3D icon。</li>
+<li><strong>標籤</strong>：非 WP</li>
+<li><strong>為什麼值得做</strong>：落地頁／App icon／社群素材需求大；「可批次、可品牌化」可比純圖庫訂閱。</li>
+<li><strong>構想</strong>：「Icon Loop Studio」— 品牌色板＋風格鎖定，批次出 WebM／APNG；輸出 Gutenberg 媒體庫與 Elementor widget。</li>
+<li><strong>難度</strong>：低～中；切入：先做 CLI／skill 包＋品牌色參數，再接 WP 媒體上傳。</li>
+</ul>
+<hr />
+<h2>WP</h2>
+<h3>7. PHP 通用 AI Agent 引擎 → WP／Woo 站內 Agent 外掛</h3>
+<ul>
+<li><strong>來源</strong>：<a href="https://github.com/phpclaw-php/phpclaw-monorepo">phpclaw-php/phpclaw-monorepo</a>（★~9，9/23 新建）— PHP 通用 AI agent 引擎：tools、memory、guards、ReAct；支援 Laravel／Symfony／WordPress 等，核心零框架依賴。</li>
+<li><strong>標籤</strong>：WP</li>
+<li><strong>為什麼值得做</strong>：多數 WP 站仍是 PHP 運行時；「站內可跑、可護欄」的 agent 比外掛一堆 AI 聊天框更可產品化。</li>
+<li><strong>構想</strong>：「WP Claw」— 外掛包裝：內容草稿、Woo 訂單查詢、安全巡檢 tools；Pro 賣多站政策與稽核。</li>
+<li><strong>難度</strong>：中；切入：先接 WP REST 讀寫＋一個 guard（禁直接 SQL）。</li>
+</ul>
+<h3>8. AI 主題前端就地編輯 → 「生成後可改」體驗產品</h3>
+<ul>
+<li><strong>來源</strong>：<a href="https://github.com/rinothecoder/pencil-by-rino">rinothecoder/pencil-by-rino</a>（★~5，9/24 新建）— 給 AI 建好的 WordPress 主題做前端內容編輯。</li>
+<li><strong>標籤</strong>：WP</li>
+<li><strong>為什麼值得做</strong>：AI 建站最大摩擦是「生成完客戶改不動」；就地編輯是轉換與續約關鍵。</li>
+<li><strong>構想</strong>：「Pencil for Agency」— 與 block theme／Elementor 生成流程串接：客戶只改文案與圖，結構鎖定；賣白牌給建站服務。</li>
+<li><strong>難度</strong>：低～中；切入：先支援標題／段落／圖三類 inline edit。</li>
+</ul>
+<hr />
+<h2>今日脈絡（一句）</h2>
+<p>Agent 從「會寫碼」轉向「能上線、能記、能控成本與權限」；WP 側可跟進 PHP 原生 agent 引擎與 AI 主題可編輯體驗。</p>
+<h2>備註</h2>
+<ul>
+<li>掃過未採用已記入 seen（含日趨勢老專案、Jev 周邊、多帳號沙盒、CVE toolkit 本體等）。</li>
+<li>未把 exploit／PoC 當產品構想來源。</li>
+</ul></section><section class="src" id="producthunt"><h2 class="src-title">驗證營收產品</h2><h1>驗證營收產品早報｜2026-09-25（台北）</h1>
+<p>今日新 9／更新 2／PH 補位 0</p>
+<blockquote>
+<p>資料：TrustMRR 為主（Stripe／Whop／Shopify 等支付驗證）；ShowMRR 今日未擠入高營收新項；MRRProof 無新增可報項。已對 seen 去重；【更新】僅列近 30 天營收變動約 ≥20% 者。近 30 天遠高於 MRR 的（電商訂單、市集、專案制）兩數字並列，不擅自平均。</p>
+</blockquote>
+<h3>1. 【今日新】Brand On Demand（Supliful）</h3>
+<p>MRR $179,499.83｜近 30 天營收 $1,027,547.92（MoM 約 +6%）｜美國｜Stripe｜DR 約 70<br />
+官網：<a href="https://supliful.com/">https://supliful.com/</a><br />
+TrustMRR：<a href="https://trustmrr.com/startup/brand-on-demand-inc">https://trustmrr.com/startup/brand-on-demand-inc</a></p>
+<p><strong>核心功能</strong>：Supliful（TrustMRR 掛名 Brand On Demand, Inc.）是給創作者／電商賣家的白牌 CPG 一條龍：補劑、蛋白粉、保養、咖啡等 190+ 美製 SKU，客製標籤、無庫存起訂、接 Shopify，訂單由平台履約。定價大致免費設計、開賣約 $69／月（年繳更低）。屬訂閱＋履約／商品相關現金流並存。</p>
+<p><strong>痛點</strong>：想做保健／美妝自有品牌的創作者，常卡在起訂量、配方合規、倉儲與金流；自建工廠太重，純代工又缺電商與履約串接。</p>
+<p><strong>台灣複製</strong>：可改編。台灣有保健食品代工與蝦皮／官網賣家，但法規（健字號、廣告誇大）、進口與食藥署標示是硬門檻。可複製「選品＋標籤＋履約＋開店」打包，金流接綠界／Stripe，差異化放在繁中合規文案、在地倉與 Threads／KOL 開品牌模板。</p>
+<hr />
+<h3>2. 【今日新】yew</h3>
+<p>MRR $2,301.53｜近 30 天營收 $238,180.51（MoM 約 +813%）｜波蘭｜Whop｜DR 約 30<br />
+官網：<a href="https://yew.gg">https://yew.gg</a><br />
+TrustMRR：<a href="https://trustmrr.com/startup/yew">https://trustmrr.com/startup/yew</a></p>
+<p><strong>核心功能</strong>：yew.gg 賣給 Cronus Zen（手把輸入硬體）用的 AI／社群腳本，主打 NBA 2K、Fortnite 等，強調 lifetime updates、Discord 社群；定價約一次性數十美元級。偏「數位腳本／社群會員」現金流。官網寫明腳本可能牴觸各遊戲 ToS，合規自負。</p>
+<p><strong>痛點</strong>：玩家想操作更穩又不願花大量時間練；腳本市集品質參差、更新跟不上賽季、退款與詐騙多。</p>
+<p><strong>台灣複製</strong>：難複製。產品落在灰色地帶，金流與上架風險高，信用卡爭議也麻煩。若只學商業模式，較接近「硬體周邊＋賽季訂閱內容」；在地可改編成合法輔助（訓練分析、覆盤工具），不要做作弊腳本。</p>
+<hr />
+<h3>3. 【今日新】Corsidia</h3>
+<p>MRR $0｜近 30 天營收 $100,191.48（MoM 約 +48%）｜義大利｜Stripe｜DR 約 39<br />
+官網：<a href="https://corsidia.com">https://corsidia.com</a><br />
+TrustMRR：<a href="https://trustmrr.com/startup/corsidia">https://trustmrr.com/startup/corsidia</a></p>
+<p><strong>核心功能</strong>：義大利課程比價／精選平台：幫學生對照學校、訓練機構與老師，只推薦通過篩選的課程，也有企業培訓與政策補助課路徑。對使用者免費、對機構端收費／導流，偏媒合抽成或 B2B 方案現金流。</p>
+<p><strong>痛點</strong>：想進修的人面對一堆廣告課與話術，難辨真假與 CP 值；機構端獲客貴、信任難建立。</p>
+<p><strong>台灣複製</strong>：可改編。台灣已有 Hahow、PressPlay、勞動部課程資訊；差異化可做「嚴格審核＋完課／就業數據＋企業包班比價」。純搬目錄站難贏，要有審核品牌與 B2B 訓企渠道。</p>
+<hr />
+<h3>4. 【今日新】Launch Club</h3>
+<p>MRR $43,450｜近 30 天營收 $77,289（MoM 約 -8%）｜美國｜Stripe｜DR 約 20<br />
+官網：<a href="https://launchclub.ai">https://launchclub.ai</a><br />
+TrustMRR：<a href="https://trustmrr.com/startup/launch-club">https://trustmrr.com/startup/launch-club</a></p>
+<p><strong>核心功能</strong>：Reddit 成長／行銷機構＋工具：幫品牌在 Reddit 發內容、卡關鍵字討論串，並把曝光連到 AI 搜尋提及。含 SaaS 教學、內容工具與代操；公開價位約試用 $1,500、Growth $2,500／月。</p>
+<p><strong>痛點</strong>：新創做 Reddit 常被當廣告洗版、帳號被封；又想擠進 AI 答案引用，卻不懂哪個串已有搜尋流量。</p>
+<p><strong>台灣複製</strong>：可改編。可改做 PTT／Dcard／Threads／小紅書的合規口碑與引用監控，或專做跨境品牌的 Reddit／AI 搜尋代操。差異化放在可追蹤的 AI 提及與社群聲量報表。</p>
+<hr />
+<h3>5. 【今日新】IBERGOUR</h3>
+<p>MRR $0｜近 30 天營收 $76,715.28（MoM 約 +146%）｜西班牙｜Stripe｜DR 約 21<br />
+官網：<a href="https://www.ibergour.com">https://www.ibergour.com</a><br />
+TrustMRR：<a href="https://trustmrr.com/startup/ibergour">https://trustmrr.com/startup/ibergour</a></p>
+<p><strong>核心功能</strong>：西班牙 IberGour 自 2005／2006 起做伊比利火腿線上專賣：5J、Joselito 等品牌與等級（bellota／pata negra 等），主打歐盟／英國配送、不滿意免費退換。典型精品食品電商訂單流。</p>
+<p><strong>痛點</strong>：想買真火腿的海外／送禮客怕買到假貨、等級看不懂、運送與退貨麻煩；一般超市又缺高端選擇。</p>
+<p><strong>台灣複製</strong>：可改編。冷鏈、衛檢、原產地證明與關稅是門檻。可複製「單一品類專家店＋保證退換＋送禮體驗」（如台灣茶、蔬果禮盒、日本和牛進口），不必硬做火腿本身。</p>
+<hr />
+<h3>6. 【今日新】MyCater</h3>
+<p>MRR $0｜近 30 天營收 $72,954.94（MoM 約 +377%）｜法國｜Stripe｜DR 約 39<br />
+官網：<a href="https://mycater.fr">https://mycater.fr</a><br />
+TrustMRR：<a href="https://trustmrr.com/startup/mycater">https://trustmrr.com/startup/mycater</a></p>
+<p><strong>核心功能</strong>：法國 B2B 企業外燴市集：HR／行政／辦公室經理可比較、下單、線上付款，涵蓋早餐、餐盤、雞尾酒、活動外燴，串約百家精選 traiteur。MoM 高可能是基期低或季節活動放大，屬市集抽成／訂單現金流。</p>
+<p><strong>痛點</strong>：公司訂便當或活動餐要打一堆電話比價、對帳、臨時改人數；品質不穩、發票與供應商管理分散。</p>
+<p><strong>台灣複製</strong>：可複製。「精選外燴＋即時報價＋對公發票＋活動級 cocktail」仍有空間，尤其竹科／內湖辦公室密集區。要贏需供應商履約 SLA、統編發票與議價；競品是美食外送與傳統宴會經紀。</p>
+<hr />
+<h3>7. 【今日新】Presscart</h3>
+<p>MRR $2,000｜近 30 天營收 $62,199（MoM 約 -32%）｜美國｜Stripe｜DR 約 14<br />
+官網：<a href="https://presscart.com">https://presscart.com</a><br />
+TrustMRR：<a href="https://trustmrr.com/startup/presscart">https://trustmrr.com/startup/presscart</a></p>
+<p><strong>核心功能</strong>：YC 背景的自助式 PR／媒體刊登市集：保證曝光、1,700+ 出版社，約 $100 起，做 SEO 外鏈與 AI 搜尋可見度；也有稿件、訪談、linkbuilding 套餐。偏專案／套餐成交，不全是月訂。</p>
+<p><strong>痛點</strong>：新創請公關月費貴、投稿遙遙無期；自己買稿又怕垃圾站，對 Google／AI 引用沒幫助。</p>
+<p><strong>台灣複製</strong>：可改編。「標價透明的媒體刊登市集＋對 SEO／AI 引用有用的版位」仍少。需處理置入性行銷揭露與成效追蹤；差異化可做繁中科技媒體＋雙語稿，而不是純賣垃圾外鏈。</p>
+<hr />
+<h3>8. 【今日新】Rank Prompt</h3>
+<p>MRR $38,235.08｜近 30 天營收 $42,673.58（MoM 約 +50%）｜美國｜Stripe｜DR 約 41<br />
+官網：<a href="https://rankprompt.com">https://rankprompt.com</a><br />
+TrustMRR：<a href="https://trustmrr.com/startup/rank-prompt">https://trustmrr.com/startup/rank-prompt</a></p>
+<p><strong>核心功能</strong>：AEO／GEO 工具：追蹤品牌在 ChatGPT、Perplexity、Google AI Mode、Claude、Gemini、Grok 等的提及與引用來源，含內容工作室、技術 SEO、citation outreach、報表與 API／MCP。定價約 Starter $150／月起（另有 Agency 方案）。</p>
+<p><strong>痛點</strong>：行銷團隊發現流量從 AI 答案來，卻不知道品牌有沒有被提到、競品引用哪裡、要改什麼內容。</p>
+<p><strong>台灣複製</strong>：可複製。繁中同樣進入 AI 搜尋戰；可做繁中 prompt 監控，或代理海外工具加繁中報告。差異化放在繁中語料、本地媒體 citation 與台幣報價／發票。</p>
+<hr />
+<h3>9. 【今日新】Dataford</h3>
+<p>MRR $33,496.42｜近 30 天營收 $44,316.7（MoM 約 +38%）｜美國｜Stripe｜DR 約 17<br />
+官網：<a href="https://www.dataford.io">https://www.dataford.io</a><br />
+TrustMRR：<a href="https://trustmrr.com/startup/dataford-inc">https://trustmrr.com/startup/dataford-inc</a></p>
+<p><strong>核心功能</strong>：幫求職者準備技術面試：依即將到來的面試產出個人化準備計畫與練習資源。公開價約 Quick Prep $29／月、年繳更低。</p>
+<p><strong>痛點</strong>：工程師面試範圍廣、題型更新快，自幹 LeetCode 沒有針對「這間公司／這場面試」的節奏；補習班又貴又不通海外大廠流程。</p>
+<p><strong>台灣複製</strong>：可改編。「針對場次的個人化計畫＋英文／演算法＋系統設計」仍可切。注意題庫著作權與代面／作弊紅線；差異化放在台灣企業＋外商台北職缺題型與履歷健診。</p>
+<hr />
+<h3>10. 【更新】unfair.so</h3>
+<p>MRR $53,281｜近 30 天營收 $164,178.22（約 +70%）｜美國｜Stripe｜DR 約 20<br />
+官網：<a href="https://unfair.so">https://unfair.so</a><br />
+TrustMRR：<a href="https://trustmrr.com/startup/unfair">https://trustmrr.com/startup/unfair</a></p>
+<p><strong>核心功能</strong>：B2B 溫熱獲客：找買家已在關注的創作者／討論場景，協助曝光與 outreach。定價約 $79／月起。相對上次通報：MRR 約 $64.3k 降到 $53.3k（約 −17%），近 30 天營收約 $96.6k 升到 $164.2k（約 +70%），以近 30 天變動達標。</p>
+<p><strong>痛點</strong>：冷郵件回覆率低；創辦人知道社群裡有高意圖討論，卻沒人力每天蹲點、建名單與跟進。</p>
+<p><strong>台灣複製</strong>：可改編。可做成繁中 Threads／FB 社團／LinkedIn 的意圖監聽＋名單 enrichment，個資法要小心。差異化放在在地渠道與中小企業價位。</p>
+<hr />
+<h3>11. 【更新】Pastel</h3>
+<p>MRR $0｜近 30 天營收 $148,621.82（約 +67%）｜法國｜Shopify｜DR 約 0<br />
+官網：<a href="https://heypastel.com">https://heypastel.com</a><br />
+TrustMRR：<a href="https://trustmrr.com/startup/pastel">https://trustmrr.com/startup/pastel</a></p>
+<p><strong>核心功能</strong>：監聽 LinkedIn／X／Reddit 等社交上的高意圖買家，補齊聯絡資訊並用 AI agent 自動接觸。公開約 99€／月（年繳）級。上次早報近 30 天約 $88.8k，今日約 $148.6k（約 +67%），MRR 欄仍為 0。</p>
+<p><strong>痛點</strong>：Outbound 太冷、Inbound 又不穩；成長團隊知道社交上有人在比較工具，卻無法即時捕捉與跟進。</p>
+<p><strong>台灣複製</strong>：可改編。繁中意圖多在 Threads、Dcard、PTT、FB；可做在地監聽＋CRM 寫入。注意個資與平台 ToS；差異化放在繁中 NLP 與中小 SaaS 價位。</p></section>
+<footer>由 Grok Bot 每日自動彙整外部資訊。時間皆為台北時間。</footer></main></body></html>
