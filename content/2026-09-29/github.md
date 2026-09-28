@@ -1,0 +1,76 @@
+# GitHub Idea 早報 · 2026-09-29（台北）
+
+> 訊號：GitHub Trending（日／週／TS／Python）＋ Search（9/22 後新建高星／API→MCP 閘道／技能文件訓練／本機 PII 脫敏／Tailscale agent 中繼／AI 文件 lint／Apple Silicon 推論／Elementor×MCP 容器／AEO 審核寫回）。非 WP 為主；今日焦點是「把既有系統接進 MCP、把 skill.md 當可訓練參數、合規脫敏後再打雲端、多 agent 互叫、文件給人與 agent 同讀、本機 Mac 當 OpenAI 端點」，WP 側跟進 Elementor MCP 一鍵環境與 SEO／AEO 人工核准寫回。
+
+---
+
+## 非 WP
+
+### 1. 任意 REST／SOAP／GraphQL／SQL → MCP 工具 → 自架企業 MCP 閘道
+- **來源**：[HelpCode-ai/anythingmcp](https://github.com/HelpCode-ai/anythingmcp)（★~557，今日 TS Trending）— 自架 MCP server／gateway：OpenAPI、Postman、WSDL、GraphQL、SQL 或 265 個現成 adapter（含 SAP B1、Odoo、Shopware、**WooCommerce**、Amazon Seller 等）一鍵變成 Claude／ChatGPT 可用工具；AES 憑證、欄位白名單、審計日誌、OAuth2／RBAC／SSO；AGPL-3.0、Docker 三分鐘起。
+- **標籤**：非 WP
+- **為什麼值得做**：代理商與中小 ERP／電商客戶要的是「既有系統給 agent 用」，不是再寫一支 MCP；閘道＋connector 目錄是清楚的授權／託管訂閱。
+- **構想**：「AnythingMCP Desk TW」— 預裝 Woo／綠界／台灣常見 ERP 的 adapter 包＋中文設定精靈；Pro：多租戶、工具級預算上限、合規審計匯出；加 WP：一鍵把站點 REST／Woo 接到客戶 Claude。
+- **難度**：中；切入：先做 Woo＋一種台灣金流／物流 OpenAPI 模板＋託管試用。
+
+### 2. 凍結模型 → 軌跡驅動編輯 skill.md → 技能自我進化平台
+- **來源**：[microsoft/SkillOpt](https://github.com/microsoft/SkillOpt)（★~17.8k，今日 Python Trending）— 把 agent skill 文件當可訓練狀態：rollout → reflect → 有界增刪改 → 驗證集閘門才接受；部署物是精簡 `best_skill.md`（約 300–2k tokens），推論零額外模型呼叫；含 SkillOpt-Sleep 夜間離線演進、Claude Code／Codex／Copilot 整合；論文與 PyPI 齊備。
+- **標籤**：非 WP
+- **為什麼值得做**：團隊已堆一堆手寫 skill，缺的是「用真實任務分數自動改 skill」的訓練迴圈；比再賣一個 chatbot 更能鎖定企業續約。
+- **構想**：「Skill Gym」— 上傳任務集與種子 skill → 出經驗證的 best_skill.md；團隊方案：夜間 sleep、基準回歸、跨 harness 遷移；加 WP：建站／SEO／Woo 驗收 skill 包週更。
+- **難度**：中高；切入：先包一種「客服分流／建站 checklist」種子＋一輪驗證報表。
+
+### 3. 本機脫敏 → 可逆佔位符 → 再打雲端 LLM → 隱私閘道
+- **來源**：[Rizzo-AI-Academy/rizzo-pii](https://github.com/Rizzo-AI-Academy/rizzo-pii)（★~1.1k，今日 Python Trending）— 本機優先、可逆 PII 匿名化：~0.3B／約 0.5GB RAM、22 類個資（含義大利稅籍／地籍等）、微 F1≈0.989；流程是本機脫敏→佔位＋本地字典→雲端 frontier→本機還原；Win／macOS／Linux 安裝包、GDPR／EU AI Act 取向。
+- **標籤**：非 WP
+- **為什麼值得做**：律師、會計、醫療、電商客服常把合約／訂單貼進 ChatGPT；台灣個資法同樣痛，「本機脫敏閘道」是可賣的 B2B 合規產品，不必自訓大模型。
+- **構想**：「MaskDesk」— 繁中／台幣／身分證／統編／住址規則包；桌面＋API；Pro：團隊字典、稽核報告、與 Claude／ChatGPT／自架代理一鍵串；加 WP／Woo：表單／工單送 LLM 前自動脫敏。
+- **難度**：中；切入：先做繁中規則＋身分證／統編／電話三類＋剪貼簿／CLI 兩入口。
+
+### 4. Tailscale 中繼 → 多 agent 互叫互醒 → 個人／團隊 Agent Mesh
+- **來源**：[mvanhorn/agent-tincan](https://github.com/mvanhorn/agent-tincan)（★~135，9/22 新建）— 在 Tailscale 上放小型 relay：各 agent 只出站連線，靠 WhoIs 辨識身分、無需互給 API key；可問答、澄清、進度、緊急喚醒、群組同問、主人核准；接 Grok／Claude／ChatGPT／Gemini／Codex／Chrome 擴充等「隊友」。
+- **標籤**：非 WP
+- **為什麼值得做**：用戶已同時養多個 agent，卻仍當人工複製貼上層；「可稽核的互叫中繼」比再加一個聊天框更好收費。
+- **構想**：「Tincan Agency」— 預設座位（研究／寫碼／客服）、核准政策、Spend／權限報表；加 WP：建站 agent 做完後喚醒通知 bot 回報客戶。
+- **難度**：中；切入：先支援 2 種 harness＋一種「實作→通知」佇列模板。
+
+### 5. AI 寫的專案文件 → 約定＋linter → 人與 agent 同讀的 Docs OS
+- **來源**：[scarletkc/seiso](https://github.com/scarletkc/seiso)（★~114，9/27 新建）— Rust 實作的 Markdown 約定與 linter：文件宣告 kind（howto／reference／adr…）、一事一處、不寫易變數字、指標可點到檔案／符號；診斷可修、給 agent 夠用；crates／PyPI／npm 齊。
+- **標籤**：非 WP
+- **為什麼值得做**：coding agent 把過期 README 當真，代理商交付文件也常被 AI「複寫三份」；「文件 lint as CI」是低摩擦訂閱切入。
+- **構想**：「Seiso Desk」— `seiso init` 業界模板（SaaS／WP 外掛／MCP server）＋ GitHub Action；Pro：組織規則、PR 自動修、與 SkillOpt 產出文件對接；加 WP：外掛 readme.txt／開發者文件 kind 包。
+- **難度**：低～中；切入：先做 WP 外掛／MCP 兩種 kind 地圖＋ Action 範本。
+
+### 6. Apple Silicon／CUDA → 精確草稿解碼 → 本機 OpenAI 相容端點
+- **來源**：[ashhart/TensorFold](https://github.com/ashhart/TensorFold)（★~554，今日 Python Trending）— 在 Apple Silicon（MLX）與 NVIDIA 上提供 OpenAI-compatible `/v1`；多模型族自帶 kernel／draft verification，草稿僅在與串列解碼完全一致時接受；支援 Nemotron／Qwen3.8／GLM／Gemma 等量化 checkpoint。
+- **標籤**：非 WP
+- **為什麼值得做**：代理商與工作室要「Mac mini 機房當便宜 API」，又怕 speculative decoding 漂結果；「可驗證 exact decode＋相容端點」可做成託管或安裝器產品。
+- **構想**：「Fold Box」— 一鍵 serve＋用量儀表＋多專案 API key；Pro：GPU／統一記憶體排程、模型目錄同步；加 WP：本機寫作／翻譯端點給 WP AI 外掛。
+- **難度**：中高；切入：先鎖一種 Mac 機型＋一種模型的安裝包與健康檢查。
+
+---
+
+## WP
+
+### 7. 設計檔 → Docker 起 WP＋Elementor＋MCP → Agent 建站環境
+- **來源**：[toniwillberg/wordpress-elementor-with-mcp-container](https://github.com/toniwillberg/wordpress-elementor-with-mcp-container)（★~2，9/27 新建）— `docker compose up` 起 MariaDB／WordPress，自動裝 Elementor、Essential Addons、ACF、Rank Math、WP-Optimize，以及 **emcp-tools**（Elementor MCP）與官方 **mcp-adapter**；設計檔丟 `import/`，coding agent 經 MCP 建完整站（免 Elementor Pro）。
+- **標籤**：WP
+- **為什麼值得做**：台灣代理商流程仍繞 WP；缺的是「可重播的 MCP 建站沙盒」，而不是再一個頁面產生器。
+- **構想**：「WP MCP Studio」— 預裝中文外掛組、品牌 starter、驗收 checklist；Pro：多專案隔離、設計→站點流水線 SaaS；與 AnythingMCP／SkillOpt 的建站 skill 串接。
+- **難度**：低～中；切入：先穩 compose＋一種設計匯入約定＋兩頁示範建站腳本。
+
+### 8. 週審 SEO／AEO／GEO → 人工核准寫回 → 可 Undo 的 WP 外掛
+- **來源**：[monoranks/wordpress-plugin](https://github.com/monoranks/wordpress-plugin)（★~1，9/20 新建）— MonoRanks 的 WP 外掛：同步已發布內容做 SEO／AEO／GEO 週審，用白話解釋修復；**只寫你核准的項目**（title／meta／alt／canonical／noindex／redirect／answer-first 開頭／robots／llms.txt），並與 Yoast／Rank Math／AIOSEO 並存；後台 Overview＋每頁分數欄、每次寫入可 Undo；GPL-2.0。
+- **標籤**：WP
+- **為什麼值得做**：AI SEO 外掛最怕「自動亂改上線」；「審核後寫回＋Undo」是代理商與品牌敢用的產品形狀，也對上 AEO／llms.txt 新需求。
+- **構想**：「Approve SEO Desk」— 繁中審核佇列、批次核准、變更 diff、客戶報表；Pro：多站 MainWP、A／B 標題、與 MaskDesk 脫敏後再送雲端建議。
+- **難度**：低～中；切入：先做 title／meta／alt 三類核准流＋Undo 日誌。
+
+---
+
+## 今日脈絡（一句）
+產品化焦點從「再包一個 coding agent」轉向「企業系統 MCP 化、skill 可訓練、合規脫敏、agent 互聯、文件 lint、本機推論端點」；WP 側可跟進 Elementor MCP 建站沙盒與人工核准的 SEO／AEO 寫回。
+
+## 備註
+- 掃過未採用已記入 seen（含日／週趨勢老專案、交易／Discord 刷人氣、offensive／CVE／PoC、awesome 清單、星刷 MCP 噪音、硬體雷達／課綱／遊戲破解等）。
+- 未把 exploit／PoC 當產品構想來源。
