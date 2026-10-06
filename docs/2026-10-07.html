@@ -1,0 +1,75 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>每日外部資訊 2026-10-07</title>
+<link rel="stylesheet" href="style.css"></head><body><main><header class="site"><a href="index.html">每日外部資訊｜2026-10-07（三）</a><nav class="days"><a href="2026-10-06.html">← 2026-10-06</a><a href="index.html">全部日期</a></nav></header><div class="toc"><a href="#github">GitHub 熱門 × 產品點子</a></div><section class="src" id="github"><h2 class="src-title">GitHub 熱門 × 產品點子</h2><h1>GitHub Idea 早報 · 2026-10-07（台北）</h1>
+<blockquote>
+<p>訊號：GitHub Trending（日／週）＋ Search（9/30 後新建高星／agent 上網能力／agent 寫的資料儀表板／AI 搜尋品牌能見度／Claude Code 隱私代換／自架監控與心跳／Cloudflare 上的自架 Git／WP agent-ready／WP 拋棄式沙盒）。非 WP 為主；今日焦點是「讓 agent 讀得到社群與影片、用一句話生出公司儀表板、看品牌在 AI 回答裡有沒有被提到、把客戶真名擋在模型外、排程任務沒跑就叫、不用養主機的團隊 Git」，WP 側跟進「把網站變成 AI 讀得懂的格式」與「讓 agent 在拋棄式 WP 裡試外掛」。</p>
+</blockquote>
+<hr />
+<h2>非 WP</h2>
+<h3>1. 一鍵讓 agent 能讀 YouTube、Reddit、X、小紅書 → 「市場口碑調查 agent」</h3>
+<ul>
+<li><strong>來源</strong>：<a href="https://github.com/Panniantong/Agent-Reach">Panniantong/Agent-Reach</a>（★~92.6k，本週 Trending +5.7k；MIT）— 幫 AI agent 一次裝好上網能力的 CLI／MCP：抓 YouTube 與 B站字幕、搜 Twitter、讀 Reddit、看小紅書、把網頁轉成可讀文字、讀 GitHub issue、訂 RSS；它替你挑當下最穩的接入方式、裝好並做健康檢查，接入方式換代時你不用自己改。</li>
+<li><strong>標籤</strong>：非 WP</li>
+<li><strong>為什麼值得做</strong>：agent 最常卡住的不是推理，而是「拿不到資料」；接入層又一直在變（封鎖、改版、要登入），把它包成維護好的服務，比每個團隊自己寫爬蟲划算。使用時要留意各平台條款與帳號風險。</li>
+<li><strong>構想</strong>：「品牌口碑週報 TW」— 指定產品或競品，agent 每週彙整 PTT、Dcard、YouTube、Threads、Google 評論上的討論與重點引述，附原文連結；Pro：負評即時推 LINE、競品對比圖表。</li>
+<li><strong>難度</strong>：低中；切入：先用 Agent-Reach 替自己的一個產品跑一份口碑報告，看哪些台灣平台還缺接入，那就是差異化的地方。</li>
+</ul>
+<h3>2. 用一句話描述 → agent 寫 SQL 和圖表 → 接上自家資料庫的唯讀儀表板</h3>
+<ul>
+<li><strong>來源</strong>：<a href="https://github.com/simonliu-ai-product/open-dashboard">simonliu-ai-product/open-dashboard</a>（★~60，10/2 新建、10/6 仍在更新；MIT；有繁中 README）— 給 agent 用的儀表板框架：跟 Claude Code 說「每月營收、前 10 名商品、各區訂單、可依區域篩選」，它寫出 <code>queries.sql</code>（計算方式）和 <code>index.tsx</code>（版面）兩個檔；所有查詢以唯讀方式跑在你自己的資料庫，篩選條件存在網址，agent 改檔時畫面即時更新；每個工作區內建教 agent 連資料、建儀表板的 skill。</li>
+<li><strong>標籤</strong>：非 WP</li>
+<li><strong>為什麼值得做</strong>：中小企業要的報表多半很單純，但 Metabase、Superset 要有人去拖拉設定；「說一句話就有、而且 SQL 可以拿去核對」剛好補上沒有資料分析師的團隊。作者看起來是繁中圈開發者，生態容易對接。</li>
+<li><strong>構想</strong>：「老闆儀表板代建 TW」— 接 POS、ERP 或電商後台資料庫，第一週代建 5 張核心報表，之後老闆直接用 LINE 說要加什麼，agent 改檔；Pro：每日數字摘要推播、異常提醒；加 WP：WooCommerce 資料表的現成查詢範本。</li>
+<li><strong>難度</strong>：低中；切入：先拿一個 WooCommerce 或 Shopify 匯出的資料庫試做「營收／熱賣／回購」三張，量 agent 一次做對的比例。</li>
+</ul>
+<h3>3. 問 AI「推薦哪一家？」→ 檢查你的品牌有沒有被提到 → AI 搜尋能見度體檢</h3>
+<ul>
+<li><strong>來源</strong>：<a href="https://github.com/Hiteater-wzm/eeo">Hiteater-wzm/eeo</a>（★~146，10/5 新建；Apache-2.0）— 「讓品牌自己陳述事實給 AI 讀」的開放社群：約 154 萬張機器可讀的品牌卡（<code>eeo.brand.v1</code> 格式）；體檢工具會用買家會問的問題去問各家 AI 引擎、保留原始回答並評分能見度，提供單一 HTML 檔、CLI、自架伺服器、MCP、GitHub Action 與瀏覽器外掛，內建 26 種引擎設定；品牌透過公開 PR 驗證網域所有權後認領自己的卡片。</li>
+<li><strong>標籤</strong>：非 WP</li>
+<li><strong>為什麼值得做</strong>：越來越多人直接問 ChatGPT 要推薦，品牌卻完全不知道自己在答案裡出不出現；能「拿原始回答當證據」的體檢報告，比空談 GEO 好賣得多。</li>
+<li><strong>構想</strong>：「AI 推薦能見度月報 TW」— 針對台灣產業（牙醫、補習班、餐廳、B2B 製造）設計繁中問題組，每月問各家 AI，報告列出誰被推薦、你排第幾、AI 引用了哪些來源；Pro：附改善清單（官網結構化資料、FAQ、第三方評論）。</li>
+<li><strong>難度</strong>：中；切入：先替 3 個認識的店家跑 20 個繁中問題，把「被提到／沒被提到」的原始截圖整理成樣本報告。</li>
+</ul>
+<h3>4. 客戶真名、公司名送進 Claude 前先換成代號 → 回到本機再換回來</h3>
+<ul>
+<li><strong>來源</strong>：<a href="https://github.com/jinrunsen/claude-my-privacy">jinrunsen/claude-my-privacy</a>（★~35，10/6 新建；未標授權）— Claude Code 外掛 MyPrivacy：依你設定的對照表，把指定的人名與公司名在送進模型前換成化名，本機工具執行前再還原、工具回傳的文字再遮蔽，並盡量在回覆顯示時換回原名；作者明說它只處理設定過的詞、不是通用個資偵測器，替換失敗也不會鎖住工作階段。</li>
+<li><strong>標籤</strong>：非 WP</li>
+<li><strong>為什麼值得做</strong>：接案公司和法務、會計事務所最大的疑慮是「客戶資料會不會被送上雲」；一個可設定、可稽核的代換層，是說服這類客戶用 AI 的關鍵。星數還很低，授權也未標，適合當概念參考。</li>
+<li><strong>構想</strong>：「AI 去識別化閘道 TW」— 團隊共用的對照表管理（客戶名、統編、地址、電話格式），所有 AI 工具的請求先經過它；Pro：稽核紀錄、自動偵測身分證字號與手機格式、每月「有哪些資料差點外流」報告。</li>
+<li><strong>難度</strong>：中；切入：先在自己的專案設 10 組客戶對照，跑一週看漏換與誤換的情況。</li>
+</ul>
+<h3>5. 排程備份沒跑、資料庫掛了 → 從叢集裡面檢查 → 一支 Go 程式含狀態頁</h3>
+<ul>
+<li><strong>來源</strong>：<a href="https://github.com/uptimy/agent">uptimy/agent</a>（★~29，10/1 新建；Apache-2.0）— 單一 Go 執行檔的自架監控：檢查網站、API、Postgres／MySQL／Redis（真的登入查詢，不只看埠有沒有開）、DNS、TLS 到期與 Kubernetes 工作負載；排程任務、備份、worker 執行時打一個網址當心跳，沒按時跑或失敗就通知；支援 Email、Slack、Discord、Telegram 等 30 多種通知管道，有維護時段與公開狀態頁；因為跑在服務旁邊，能檢查外部監控碰不到的內網位址。</li>
+<li><strong>標籤</strong>：非 WP</li>
+<li><strong>為什麼值得做</strong>：多數監控只看「網站會不會開」，真正出事常是「備份三天沒跑」或「排程默默失敗」；心跳監控加狀態頁是代管客戶最有感、也最容易月費化的服務。</li>
+<li><strong>構想</strong>：「代管客戶健康儀表 TW」— 為每個代管客戶部署一個 agent，網站、資料庫、備份、排程都進同一個儀表，出事推 LINE；每月自動寄「本月上線率與事件」報告給客戶；加 WP：WP-Cron 與備份外掛的心跳範本。</li>
+<li><strong>難度</strong>：低；切入：先在自己的伺服器裝它，把備份與排程任務都接上心跳，跑一個月拿數據當銷售素材。</li>
+</ul>
+<h3>6. 熟悉的 GitHub 介面 → 整套部署在一個 Cloudflare Worker → 小團隊每月幾美元的私有 Git</h3>
+<ul>
+<li><strong>來源</strong>：<a href="https://github.com/choyiny/gitorange">choyiny/gitorange</a>（★~24，10/2 新建；Apache-2.0）— 單一租戶的自架 Git 平台：程式庫放在 Cloudflare Artifacts（相容 git 的儲存），其他資料放 D1；有 PR 對話、檔案差異、AI 協助解衝突、一鍵 rebase 與合併；直接跑你現有的 <code>.github/workflows/*.yml</code>（在 Cloudflare Containers 上，不用自己架 runner，目前還不支援 repository secrets）；附 Claude Code 上手 skill，一路幫你建資料庫、設定、部署。需要 Workers 付費方案。</li>
+<li><strong>標籤</strong>：非 WP</li>
+<li><strong>為什麼值得做</strong>：有些客戶（政府標案、金融、製造）不能把程式碼放 GitHub，又養不起 GitLab 主機；「沒有主機要維護」的私有 Git 是很明確的利基。</li>
+<li><strong>構想</strong>：「合規私有 Git 代建 TW」— 替有資料落地要求的團隊部署並維運 GitOrange，附帳號權限、備份匯出與稽核報告；Pro：串接內部 SSO、每月安全更新。</li>
+<li><strong>難度</strong>：中；切入：先在自己的 Cloudflare 帳號部署一套，把一個小專案搬上去跑 CI，記錄目前缺哪些 GitHub 功能。</li>
+</ul>
+<hr />
+<h2>WP</h2>
+<h3>7. WP 網站自動產出 <code>.md</code> 頁面、<code>llms.txt</code>、唯讀 MCP → 讓 AI 讀得懂、找得到你的內容</h3>
+<ul>
+<li><strong>來源</strong>：<a href="https://github.com/miriamschwab/make-my-site-agent-ready">miriamschwab/make-my-site-agent-ready</a>（★~6，10/6 仍在更新；未標授權）— WordPress 外掛：每篇文章存檔時產生乾淨的 markdown（<code>.md</code> 網址）、<code>/llms.txt</code> 與 <code>/llms-full.txt</code> 索引、<code>/openapi.json</code>、唯讀 MCP 伺服器與 WebMCP、<code>security.txt</code>、在 <code>robots.txt</code> 宣告 AI 使用偏好、AI 爬蟲規則、可選的 agent 請求紀錄與流量摘要，並與 Yoast 的結構化資料合併不重複；每個功能都能在設定頁個別關閉。</li>
+<li><strong>標籤</strong>：WP</li>
+<li><strong>為什麼值得做</strong>：跟第 3 則是同一個需求的兩端：一邊量「AI 有沒有推薦你」，一邊讓網站「AI 讀得懂」；WP 站主很需要一個開了就好、又不會弄壞現有 SEO 的方案。</li>
+<li><strong>構想</strong>：「WP AI 可讀化套餐 TW」— 以這個外掛的功能為參考做繁中版（處理中文網址、繁中 llms.txt 摘要），搭配 agent 請求紀錄做每月「哪些 AI 來讀了你的站」報告；可和 AI 推薦能見度月報綁成一個方案。</li>
+<li><strong>難度</strong>：低中；切入：先在自己的部落格裝上，觀察兩週 agent 請求紀錄，看哪些 AI 爬蟲真的會來讀 <code>.md</code> 和 <code>llms.txt</code>。</li>
+</ul>
+<h3>8. 幾秒開出一個拋棄式 WordPress → 讓 agent 在裡面試外掛、跑修補 → 用完即丟</h3>
+<ul>
+<li><strong>來源</strong>：<a href="https://github.com/Automattic/wp-codebox">Automattic/wp-codebox</a>（★~18；MIT；Automattic 出品，10/3 仍在更新）— 以 WordPress Playground 為底的拋棄式 WP 執行環境：幾秒開機、只能透過宣告的掛載讀寫主機檔案，跑完交回結果包就消失；可從 CLI、CI、Node 服務、GitHub Action 或 WP 外掛呼叫，用來讓 agent 跑任務、測試別人送來的修補、評估外掛、重現 bug，不需要 Docker 或資料庫。</li>
+<li><strong>標籤</strong>：WP</li>
+<li><strong>為什麼值得做</strong>：讓 AI 改 WP 最怕直接動到正式站；Automattic 把「安全的試驗場」做成標準元件，代表「agent 先在沙盒做、人看過再上線」會成為 WP 的標準流程，周邊的審核介面與檢查清單就是產品空間。</li>
+<li><strong>構想</strong>：「外掛更新試跑服務 TW」— 每次外掛或佈景主題要更新前，先在 wp-codebox 裡用客戶站的設定試跑、截圖比對、跑結帳流程，報告「可以更新／有風險」再讓人按核准；Pro：代管客戶每週自動跑。</li>
+<li><strong>難度</strong>：中；切入：先拿一個常出問題的外掛更新，在 wp-codebox 裡寫一份試跑流程，測從開機到出報告要多久。</li>
+</ul></section>
+<footer>由 Grok Bot 每日自動彙整外部資訊。時間皆為台北時間。</footer></main></body></html>
