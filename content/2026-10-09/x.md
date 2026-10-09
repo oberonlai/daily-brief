@@ -1,0 +1,43 @@
+# X 熱門早報｜2026-10-09（五）
+
+今天最熱的是 Claude 推出 Dashboards 和 Motion 兩個 beta 功能（兩萬四千多讚），OpenAI 則替 GPT-6.1 Sol 加上最快 8 倍的 Ultrafast 模式；WordPress 圈官方 MCP Adapter 外掛一週不到就破四萬安裝，SEO 圈在討論 Google 新的 UGC Fresh Data Program，以及最近人工處罰（manual action）好像變多了。
+
+### 1. Claude（@claudeai）｜AI
+Claude Dashboards 和 Claude Motion 今天開始 beta：可以叫 Claude 把資料變成即時更新的儀表板，或把想法做成動畫解說影片。這則有兩萬四千多讚、一萬四千多次收藏，是今天互動最高的一則。
+https://x.com/claudeai/status/2108271552991252810
+
+### 2. OpenAI Developers（@OpenAIDevs）｜AI／開發工具
+GPT-6.1 Sol 推出「Ultrafast」模式，API、Codex 和 ChatGPT Work 同步上線。官方說法是接近 Astra 等級的智慧、速度最高是 Sol Standard 的 8 倍，對要大量跑 agent 迭代的人很有感。
+https://x.com/OpenAIDevs/status/2108262812489531498
+
+### 3. Anthropic（@AnthropicAI）｜AI／資安
+Anthropic 宣布啟動「Anthropic Cyber Mission」，目標是保護關鍵基礎設施和開源軟體的安全。同一天 Anthropic 也宣布投入 1.5 億美元支持美國政府的 Genesis Mission 科研計畫。
+https://x.com/AnthropicAI/status/2108302539498414208
+
+### 4. Thariq（@trq212）｜MCP／Agent
+Anthropic 的 Thariq 說，Claude MAX 方案現在每個月會附送 Claude API 額度（依方案 100 或 200 美元），鼓勵大家拿來做自己的個人 AI 工具。他示範自己做了一個每天依常看網站自動生成的 AI 首頁，取代 Chrome 新分頁，之後也把這個 Chrome 擴充套件的 repo 公開了。
+https://x.com/trq212/status/2108301668828004396
+
+### 5. Simon Willison（@simonw）｜開源／開發工具
+他推薦微軟新開源的跨平台沙箱函式庫 microsoft/mxc，支援 Windows、macOS、Linux，底層用 processcontainer、bubblewrap、seatbelt。要讓 coding agent 在本機安全執行指令的人值得研究，這則有近五百次收藏。
+https://x.com/simonw/status/2108216753604248000
+
+### 6. DAIR.AI（@dair_ai）｜AI／訓練
+介紹 NVIDIA 的 NeMo-DCR 論文：在他們量測的六個模型中，每次 RL 更新只有 0.6%～1.2% 的權重會變，但一般做法每次都整份 checkpoint 複製到 rollout 叢集。只傳差異後，1T 模型（3% 變動率）的同步從 87.5 分鐘縮到 150 秒，30B～1T 模型整體快 12～40 倍。
+https://x.com/dair_ai/status/2108229693061357652
+
+### 7. The Repository（@therepositorywp）｜WordPress／MCP
+WordPress 官方的 MCP Adapter 外掛上架 WordPress.org 外掛目錄不到一週，啟用安裝數已經超過四萬（此為 The Repository 報導）。WordPress 接 AI agent 的官方路線正在快速普及，跟我們在做的 WP MCP 方向直接相關。
+https://x.com/therepositorywp/status/2108120231973380383
+
+### 8. Woo（@WooCommerce）｜WooCommerce／MCP
+架在 Pressable 上的 WooCommerce 商店，現在可以把主機帳號直接接到 Claude、ChatGPT、Gemini CLI 或 Cursor。官方附一份免費指南，涵蓋上線前檢查、備份、資安掃描等 6 種工作流程和測過的提示詞。
+https://x.com/WooCommerce/status/2107840905436655629
+
+### 9. Marie Haynes（@Marie_Haynes）｜SEO
+Google 推出「UGC Fresh Data Program」，有大量新鮮使用者內容的網站（例如論壇）可以申請，把新貼文直接送進 Google 搜尋。門檻不低：要有高流量和使用者量、所有 UGC 要對應到有公開個人頁的作者，還要實作 OAuth 2.0 API 驗證和 SocialMediaPosting／DiscussionForumPosting 等結構化資料。
+https://x.com/Marie_Haynes/status/2108203505026465912
+
+### 10. Glenn Gabe（@glenngabe）｜SEO
+Barry Schwartz 在 SER 報導 SEO 圈觀察到 Google 最近好像發出更多人工處罰，Glenn Gabe 也說他有同感：spam update 期間來求助的網站裡，夾雜更多「Pure spam」「Thin content」等人工處罰。他認為跟用 AI 生成內容或程式化頁面做「大規模內容濫用」有關（屬業界觀察，Google 未證實）。
+https://x.com/glenngabe/status/2108165837332848782
