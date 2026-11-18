@@ -1,0 +1,59 @@
+# GitHub 熱門 × 產品 idea 早報（2026-11-18）
+
+來源：GitHub Trending（日／週）、Search 近 7 天新建高星 repo、WordPress 相關搜尋。已與 seen-repos.json 去重。
+
+## 1. 團隊版 AI Code Review SaaS（非 WP）
+- Repo：https://github.com/alibaba/open-code-review
+- 來源重點：Alibaba 開源，確定性流程 + LLM Agent 混合架構，逐行評論，內建 NPE、執行緒安全、XSS、SQL injection 規則，相容 OpenAI／Anthropic。
+- 為什麼值得做：純 LLM review 雜訊多，「規則先擋 + LLM 補強」更穩，企業願意付費買低誤報。
+- 產品構想：託管版 GitHub App，加上中文／台灣團隊規範包、PR 品質週報、按 repo 計價。
+- 難度與切入點：中。先做 GitHub App + 自訂規則 YAML，鎖定 10–50 人外包／接案團隊。
+
+## 2. Coding Agent 交付流程編排（非 WP）
+- Repo：https://github.com/Tencent/LoopForge
+- 來源重點：自架 workflow，用腳本與人工核准閘門編排 CodeBuddy、Codex、Claude Code。
+- 為什麼值得做：多 agent 並行後，缺的是「誰做什麼、何時要人點頭」的管控層。
+- 產品構想：雲端 dashboard，把 issue → agent 實作 → 人審 → 合併串成可視化流水線，附成本與稽核紀錄。
+- 難度與切入點：中高。先做 Slack／LINE 核准通知 + 每次任務花費報表。
+
+## 3. Agent 規劃與審閱協作工作台（非 WP）
+- Repo：https://github.com/backnotprop/plannotator
+- 來源重點：日榜與週榜皆上榜，可對 agent 的計畫與程式碼做標註，一鍵把回饋送回 agent，並可分享給團隊。
+- 為什麼值得做：人類審 agent 計畫是新瓶頸，標註回饋比聊天來回有效率。
+- 產品構想：付費團隊版：計畫版本比對、留言串、審核權限、客戶可見的分享連結（接案時給客戶確認範圍）。
+- 難度與切入點：中。以「給客戶看的 AI 工作計畫確認頁」做垂直切入。
+
+## 4. 自架 Docker 管理 + 託管服務（非 WP）
+- Repo：https://github.com/getarcaneapp/arcane
+- 來源重點：現代化 Docker 管理介面，主打給所有人用。
+- 為什麼值得做：小團隊、自架愛好者要管 VPS 上的容器，但不想學 K8s。
+- 產品構想：多主機統一管理 SaaS，加一鍵應用範本（n8n、Ghost、Umami）、備份與更新提醒。
+- 難度與切入點：中。先做「VPS 應用商店 + 自動備份」，月費 5–10 美元。
+
+## 5. 跨平台研究 Agent 做成訂閱簡報（非 WP）
+- Repo：https://github.com/mvanhorn/last30days-skill
+- 來源重點：Agent skill，跨 Reddit、X、YouTube、HN、Polymarket 與網路研究任一主題，輸出有依據的摘要。
+- 為什麼值得做：「過去 30 天某主題發生什麼」是通用高頻需求，內容可訂閱化。
+- 產品構想：輸入關鍵字／競品，每週自動寄出中文趨勢簡報，附引用來源；賣給行銷與創業者。
+- 難度與切入點：低。用 skill 當引擎，先包 Email 週報 + 付費牆。
+
+## 6. 長影片 AI 剪輯自架 + 代管（非 WP）
+- Repo：https://github.com/haziqahmedqasmi/PeakCut
+- 來源重點：長影片與直播的 AI 切片，自架，自帶 AI key。
+- 為什麼值得做：Podcast／直播主要把長內容切成短影音，現有工具貴。
+- 產品構想：繁中字幕與社群尺寸的 BYOK 代管版，按分鐘計費，直接輸出 Reels／Shorts。
+- 難度與切入點：中。先做 YouTube 連結轉 5 支短片的單一流程。
+
+## 7. WP：把 WordPress 轉成靜態 Astro 站的服務（WP）
+- Repo：https://github.com/ethanplusai/astro-conversion-kit
+- 來源重點：Agent skills 將 WordPress 網站轉為靜態 Astro，保持 URL、SEO、內容與像素一致，並帶到上線。
+- 為什麼值得做：許多舊站想降低主機與被駭風險，但怕 SEO 掉。
+- 產品構想：「WP 轉靜態」一次性服務／工具：自動比對前後 SEO 與 URL，附 301 對照表，單站收費。
+- 難度與切入點：中。先在自己的客戶站驗證，做成案例再包成固定報價。
+
+## 8. WP：一鍵多平台同步發文外掛（WP）
+- Repo：https://github.com/wechatsync/Wechatsync
+- 來源重點：一次發布同步到頭條、WordPress、知乎、簡書、掘金、CSDN、typecho 等平台。
+- 為什麼值得做：反向思考——台灣版把 WP 文章同步到 Medium、LinkedIn、Facebook、Threads、LINE VOOM。
+- 產品構想：WP 外掛「發文後自動分發」：各平台自動改寫標題與摘要、附 canonical 連結，維持 SEO。
+- 難度與切入點：中。先做 Medium + LinkedIn + Threads，賣年費授權。
