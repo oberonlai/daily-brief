@@ -1,0 +1,63 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>每日外部資訊 2026-11-22</title>
+<link rel="stylesheet" href="style.css"></head><body><main><header class="site"><a href="index.html">每日外部資訊｜2026-11-22（日）</a><nav class="days"><a href="2026-11-21.html">← 2026-11-21</a><a href="index.html">全部日期</a></nav></header><div class="toc"><a href="#github">GitHub 熱門 × 產品點子</a></div><section class="src" id="github"><h2 class="src-title">GitHub 熱門 × 產品點子</h2><h1>GitHub 熱門 × WP／SaaS idea 早報 2026-11-22</h1>
+<p>今天從 GitHub Trending、近 3／14 天新建高星 repo 與 Show HN 中篩選。搜尋結果混有大量遊戲外掛／破解類垃圾 repo，已全部排除。</p>
+<h2>一、SaaS／開發者工具</h2>
+<h3>1. TamServe：多路攝影機即時物件追蹤服務</h3>
+<ul>
+<li>GitHub：<a href="https://github.com/aryamandarda/tamserve">https://github.com/aryamandarda/tamserve</a> （建立：2026-11-11）</li>
+<li>來源重點：Show HN 123 分；以 SAM3／SAM 2／EdgeTAM 在單張或多張 GPU 上服務多路即時影像追蹤，Apache-2.0，約 269 星。</li>
+<li>為什麼值得做：零售、工廠、停車場需要「看得懂畫面」，但中小企業沒有 ML 團隊自架。</li>
+<li>產品構想：託管式「攝影機 → 追蹤事件 webhook」SaaS，按攝影機路數月費，提供人流熱區、停留時間、區域入侵告警儀表板。</li>
+<li>難度與切入點：中高（GPU 成本）。先鎖定台灣連鎖店人流統計，用 RTSP 接入。</li>
+</ul>
+<h3>2. TrnRT：AWS Trainium 的 LLM 推論引擎</h3>
+<ul>
+<li>GitHub：<a href="https://github.com/RunanywhereAI/trnrt">https://github.com/RunanywhereAI/trnrt</a> （建立：2026-10-30）</li>
+<li>來源重點：Show HN；約 1,650 星；NKI megakernel、100 萬 token context、OpenAI 相容 API。</li>
+<li>為什麼值得做：Trainium 比 GPU 便宜，但缺好用推論層，成本敏感團隊有誘因。</li>
+<li>產品構想：「推論成本比價與遷移」服務：貼上現有 OpenAI 呼叫，自動基準測試並產出遷移到 Trainium 的成本報告與部署模板。</li>
+<li>難度與切入點：高。先做成本估算器（輕量工具）導流，再賣託管。</li>
+</ul>
+<h3>3. Open Artifact：本機檔案化、與模型無關的 AI 產物編輯器</h3>
+<ul>
+<li>GitHub：<a href="https://github.com/JimLiu/open-artifact">https://github.com/JimLiu/open-artifact</a> （建立：2026-11-17）</li>
+<li>來源重點：Trending 候選；約 142 星；簡報、UI 設計、白板等 AI 產物存成純檔案，可編輯、留言、匯出。</li>
+<li>為什麼值得做：AI 生成的簡報／頁面常「生成完就卡住」，缺少審閱與協作流程。</li>
+<li>產品構想：面向代理商的「AI 產物審閱平台」：客戶直接在 AI 產出的提案、網站稿上留言，版本與匯出集中管理。</li>
+<li>難度與切入點：中。先做分享連結＋留言＋版本比較。</li>
+</ul>
+<h3>4. agy-fast：Antigravity 的 MCP 加速外掛</h3>
+<ul>
+<li>GitHub：<a href="https://github.com/INK-Q/agy-fast">https://github.com/INK-Q/agy-fast</a> （建立：2026-11-19）</li>
+<li>來源重點：約 251 星，MIT；宣稱降低 LLM 回合數 34%、token 配額 31%、上傳流量 40%（作者自述，需自行驗證）。</li>
+<li>為什麼值得做：Coding agent 的 token 成本是團隊痛點，優化有直接金額可衡量。</li>
+<li>產品構想：「Agent 成本儀表板」：收集各 coding agent 的 token／回合紀錄，找出浪費模式並建議 MCP／設定調整。</li>
+<li>難度與切入點：中。先做 CLI 本機分析日誌，產出週報。</li>
+</ul>
+<h3>5. MR Office：開源文件／試算表／簡報／PDF 編輯器</h3>
+<ul>
+<li>GitHub：<a href="https://github.com/XinaTian/MROffice">https://github.com/XinaTian/MROffice</a> （建立：2026-11-10）</li>
+<li>來源重點：約 1,411 星，AGPL-3.0；網頁版全套辦公編輯器，含手寫與程式碼編輯。</li>
+<li>為什麼值得做：企業想要可私有部署的辦公套件，台灣中小企業與政府標案常有資料不出境需求。</li>
+<li>產品構想：在地化部署服務：繁中字型、台灣公文／發票範本、SSO 整合，按席位收年費維運。</li>
+<li>難度與切入點：中。注意 AGPL 授權，商業做法以「託管＋服務」為主，需先法務確認。</li>
+</ul>
+<h3>6. PiBot：本機優先的 AI 代理團隊桌面應用</h3>
+<ul>
+<li>GitHub：<a href="https://github.com/w01fb0ss/PiBot">https://github.com/w01fb0ss/PiBot</a> （建立：2026-11-21）</li>
+<li>來源重點：約 167 星，Apache-2.0；多代理群組聊天、電腦操作、瀏覽器、MCP、排程與核准機制。剛建立一天，需觀察穩定度。</li>
+<li>為什麼值得做：「排程＋核准」是代理落地到小公司的關鍵，與同類產品相比強調本機隱私。</li>
+<li>產品構想：垂直化代理團隊範本包（電商客服、行銷週報、財務對帳），以訂閱販售流程範本與核准規則。</li>
+<li>難度與切入點：低到中。先賣範本與設定服務，不自己做底層。</li>
+</ul>
+<h2>二、WordPress</h2>
+<h3>7. AI Connect（TensorPass）：網站用 AI 對話／答案式搜尋 SDK</h3>
+<ul>
+<li>GitHub：<a href="https://github.com/tensorpass/aiconnect">https://github.com/tensorpass/aiconnect</a> （建立：2026-11-12）</li>
+<li>來源重點：約 31 星（早期），Apache-2.0；為網站加入 AI 聊天、能回答問題的搜尋列，由訪客自己的 AI 額度驅動。</li>
+<li>為什麼值得做：「訪客自帶額度」讓站長免付 token 成本，是 WP 站點導入 AI 搜尋的最大門檻之一。</li>
+<li>產品構想：WordPress／WooCommerce 外掛：把站內文章、商品索引後，提供答案式搜尋與商品推薦，不需站長負擔 API 費用。</li>
+<li>難度與切入點：低到中。先做 WooCommerce 商品搜尋區塊（Gutenberg block），再擴到客服。專案很新，需評估 SDK 穩定度。</li>
+</ul></section>
+<footer>由 Grok Bot 每日自動彙整外部資訊。時間皆為台北時間。</footer></main></body></html>
