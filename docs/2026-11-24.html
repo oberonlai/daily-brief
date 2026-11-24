@@ -1,0 +1,61 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>每日外部資訊 2026-11-24</title>
+<link rel="stylesheet" href="style.css"></head><body><main><header class="site"><a href="index.html">每日外部資訊｜2026-11-24（二）</a><nav class="days"><a href="2026-11-23.html">← 2026-11-23</a><a href="index.html">全部日期</a></nav></header><div class="toc"><a href="#github">GitHub 熱門 × 產品點子</a></div><section class="src" id="github"><h2 class="src-title">GitHub 熱門 × 產品點子</h2><h1>GitHub 熱門 × WP／SaaS idea 早報｜2026-11-24</h1>
+<p>今日改用新規則：Trending 只留 30 天內新建的 repo（今天的 Trending 全是老牌或已報過，無一入選），主力來自近 3 天／14 天新建高星 Search、Show HN 與 WP 新 repo。大量遊戲外掛、交易機器人、破解工具類 repo 已排除。</p>
+<h2>1. 多裝置 AI 測試員：行動 App 驗收即服務</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/pierridotite/mobile-agent-testers（建立：2026-11-16">https://github.com/pierridotite/mobile-agent-testers（建立：2026-11-16</a>）</li>
+<li>來源重點：用 Claude Code agent 在 20 種手機人設、iOS Simulator／Android emulator 上並行測試，跑在 GitHub 免費 runner，剛上 Product Hunt，約 1,450 星。</li>
+<li>為什麼值得做：小團隊做 App 沒有 QA 預算，上架前常被各種機型、語系問題打槍。</li>
+<li>產品構想：託管版「上架前 AI 驗收」：上傳 APK／TestFlight，選人設（長輩、低階機、英文介面），產出可重現的 bug 影片與報告。</li>
+<li>難度與切入點：中高。先做 Android 單一流程（註冊→付款）的測試，按次計費。</li>
+</ul>
+<h2>2. 瀏覽器內 Linux 沙盒：教學與程式碼執行 SaaS</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/pithings/unkernel（建立：2026-11-12">https://github.com/pithings/unkernel（建立：2026-11-12</a>）</li>
+<li>來源重點：真正的 Linux kernel 編成 WebAssembly，不到 1 秒開機進 shell，可跑 Alpine／Debian 套件，完全在使用者裝置運行、不用伺服器。</li>
+<li>為什麼值得做：線上課程、技術文件、面試平台都需要隔離環境，傳統雲端沙盒按量計費成本高。</li>
+<li>產品構想：可嵌入的「點一下就能操作」終端 widget，供技術教學站、文件與 API demo 使用；伺服器成本趨近於零。</li>
+<li>難度與切入點：中。先做嵌入 SDK＋預載環境模板（Node、Python、Git），訂閱制賣給課程平台。</li>
+</ul>
+<h2>3. AI Agent 設定與程式碼安全掃描：PR 檢查服務</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/erkamyaman/safe-anything（建立：2026-11-22">https://github.com/erkamyaman/safe-anything（建立：2026-11-22</a>）</li>
+<li>來源重點：Rust 單一指令掃 XSS、SQL injection、外洩金鑰、相依套件 CVE，連 AI agent 設定檔也檢查，每個發現附行號、原因、修法。</li>
+<li>為什麼值得做：AI 產生的程式碼量暴增，中小團隊沒有資安人力。</li>
+<li>產品構想：GitHub App：每個 PR 自動掃描並留言中文修正建議，附月報給非技術老闆看。</li>
+<li>難度與切入點：低中。包裝既有掃描器，差異化在繁體中文報告與台灣合規（個資法）提示。</li>
+</ul>
+<h2>4. 手機 App 行為隱私體檢：給家長與中小企業的 Android 管理報告</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/ybblab/Jiumi（建立：2026-11-13">https://github.com/ybblab/Jiumi（建立：2026-11-13</a>）</li>
+<li>來源重點：免 root 的 Android App，顯示各 App 前後台權限存取與網路活動，紀錄存在本機，約 1,290 星。</li>
+<li>為什麼值得做：公司配發手機、長輩與小孩的手機，常不知道 App 偷做什麼事。</li>
+<li>產品構想：把本機紀錄做成可匿名上傳的「裝置健康報告」，給 MDM 輕量版：企業 IT 一頁看全部公司手機的可疑 App。</li>
+<li>難度與切入點：中。先做報告匯出與多裝置儀表板，鎖定 10–50 人公司。</li>
+</ul>
+<h2>5. 把 AI 時代的工作變成遊戲：員工 AI 素養訓練</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/gulivan/worker755（建立：2026-11-11">https://github.com/gulivan/worker755（建立：2026-11-11</a>）；Show HN 356 分</li>
+<li>來源重點：瀏覽器遊戲，AI 主管把你當成它的 subagent，等於體驗被 agent 指揮的感受，在 HN 爆紅。</li>
+<li>為什麼值得做：企業想訓練員工與 AI 協作及提示技巧，現有課程枯燥。</li>
+<li>產品構想：可客製的「AI 協作情境遊戲」模組，HR 設定公司情境，輸出員工分數與弱點分析。</li>
+<li>難度與切入點：中。先做 3 個情境、單一企業試辦。</li>
+</ul>
+<h2>6.【WP】Site Map 式整站設計畫布外掛</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/draganescu/wordpress-for-designers（建立：2026-11-19">https://github.com/draganescu/wordpress-for-designers（建立：2026-11-19</a>）</li>
+<li>來源重點：在 WP 後台開無限畫布，每個 artboard 是真實頁面／模板／pattern，全域樣式修改後所有畫板即時重繪。</li>
+<li>為什麼值得做：客戶與設計師溝通整站改版時，缺少一眼看全站的工具。</li>
+<li>產品構想：加上「客戶留言標註＋版本比較＋一鍵核准」，變成改版驗收外掛，賣給接案工作室。</li>
+<li>難度與切入點：中。先做畫布上的留言標註與截圖比對。</li>
+</ul>
+<h2>7.【WP】受駭網站處理流程化：安全事件 SOP 服務</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/MADEVAL/wordpress-security-ops（建立：2026-11-07">https://github.com/MADEVAL/wordpress-security-ops（建立：2026-11-07</a>）</li>
+<li>來源重點：不是檢查清單，而是 發現→確認→隔離→清除→復原→驗證→報告 的完整流程，可用 WP-CLI、SSH、日誌運作，且不把單次掃描當作乾淨證明。</li>
+<li>為什麼值得做：維運商與接案者遇到中毒網站都在手動處理，沒有標準流程與客戶報告。</li>
+<li>產品構想：WP 維運商用的「事件處理工作台」：流程步驟、證據收集、客戶可讀的事後報告自動生成。</li>
+<li>難度與切入點：低中。先做報告產生器與 SOP 範本，連結 WP-CLI 輸出。</li>
+</ul></section>
+<footer>由 Grok Bot 每日自動彙整外部資訊。時間皆為台北時間。</footer></main></body></html>
