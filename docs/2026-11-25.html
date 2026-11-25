@@ -1,0 +1,69 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>每日外部資訊 2026-11-25</title>
+<link rel="stylesheet" href="style.css"></head><body><main><header class="site"><a href="index.html">每日外部資訊｜2026-11-25（三）</a><nav class="days"><a href="2026-11-24.html">← 2026-11-24</a><a href="index.html">全部日期</a></nav></header><div class="toc"><a href="#github">GitHub 熱門 × 產品點子</a></div><section class="src" id="github"><h2 class="src-title">GitHub 熱門 × 產品點子</h2><h1>GitHub 熱門 × WP／SaaS idea 早報｜2026-11-25</h1>
+<p>今天的 Trending 日榜、週榜仍是已報過或老牌專案，沒有入選。下面 8 則來自近幾天新建的高星 repo、近 3 天的 release，以及 Show HN。遊戲移植、外掛、破解、漏洞 PoC 與星數農場已排除。</p>
+<h2>1. AI 程式碼品味檢查：PR 的 slop 分數</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/deterministic-machines/deslop-please（建立：2026-11-22">https://github.com/deterministic-machines/deslop-please（建立：2026-11-22</a>）</li>
+<li>來源重點：MIT 的 Rust linter，主張深模組、窄介面，用來抓 AI 寫出來的鬆散程式碼。2026-11-24 發了 v0.1.4，約 737 星。</li>
+<li>為什麼值得做：團隊已經會掃 CVE，但沒人量「這份 AI 程式碼好不好維護」。</li>
+<li>產品構想：GitHub App 對每個 PR 打 slop 分數，留言指出過寬的介面與外洩的內部細節，並出週報給技術主管。</li>
+<li>難度與切入點：低中。先包現成 CLI，差異化做繁體中文說明與「可合併／先改」門檻。</li>
+</ul>
+<h2>2. 沒有 Mac 的 iOS Agent 測試雲</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/Developing-Gamer/agent-sim（建立：2026-11-21">https://github.com/Developing-Gamer/agent-sim（建立：2026-11-21</a>）</li>
+<li>來源重點：在一般 Linux 上跑 iOS 模擬器給 AI agent 操作，不需要 Mac 或 GPU。建在 x86Sim 之上，2026-11-23 發了 v0.1.0，約 553 星。</li>
+<li>為什麼值得做：App 團隊想讓 agent 自己點過註冊與付款，但 Mac 農場又貴又難管。</li>
+<li>產品構想：上傳建置、選 iOS 版本，agent 用 API 看畫面、點擊，回傳可重播的失敗片段。按分鐘計費。</li>
+<li>難度與切入點：高。先做單一流程（登入→結帳）與錄影報告，賣給已經有 Android 測試、缺 iOS 的小團隊。</li>
+</ul>
+<h2>3. 測試守門的刪碼服務</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/EL4CTEO/shrink-anything（建立：2026-11-23">https://github.com/EL4CTEO/shrink-anything（建立：2026-11-23</a>）</li>
+<li>來源重點：刪掉用不到的程式碼、檔案、相依與素材，每一刀都要用專案自己的測試守住。支援約 19 種語言，當天發了 v0.1.0，約 160 星。</li>
+<li>為什麼值得做：AI 生成的專案越長越大，人工刪碼又怕弄壞。</li>
+<li>產品構想：接上 CI，每個 PR 提案「可安全刪除」的 diff，通過測試才開 PR。按刪掉的行數或月費計價。</li>
+<li>難度與切入點：中。先做 TypeScript／PHP 專案，鎖定接了很多 AI 生成外掛的工作室。</li>
+</ul>
+<h2>4. 給 Agent 用的 Postgres 分析讀副本</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/embeddable-hq/mason-data（建立：2026-10-27">https://github.com/embeddable-hq/mason-data（建立：2026-10-27</a>）</li>
+<li>來源重點：Show HN（2026-11-24，約 80 分）。單一行程把 Postgres 同步進欄位式引擎，查詢語法仍是 Postgres，並給每個 agent 獨立帳號、欄位與列權限，內建 MCP。官網已有 Mason Cloud。</li>
+<li>為什麼值得做：把正式庫直接交給 agent 查報表，既慢又有洩漏風險。</li>
+<li>產品構想：託管「分析讀副本」：選表、設 agent 角色、看每條 SQL 日誌。賣給已有 Postgres 的 SaaS，而不是再做一個 BI。</li>
+<li>難度與切入點：中高。不要跟官方雲硬碰。先做「代理商版」：多客戶、用量上限、查詢被拒時的中文修法提示。</li>
+</ul>
+<h2>5. 用閒置電腦訓練自己的小模型</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/sous-labs/songe（建立：2026-11-20">https://github.com/sous-labs/songe（建立：2026-11-20</a>）</li>
+<li>來源重點：用閒置算力訓練本機模型的引擎，Apache-2.0，官網 souslabs.ai/songe，約 658 星，仍在每天更新。</li>
+<li>為什麼值得做：中小團隊想要自己的小模型，但買 GPU 或長租雲端都划不來。</li>
+<li>產品構想：辦公室電腦與夜間雲端的訓練排程器。白天只佔用閒置，完成後交出可下載的模型與花費。</li>
+<li>難度與切入點：高。先做單機「下班後訓練」與進度通知，再做多機佇列。</li>
+</ul>
+<h2>6. 四視圖像素圖變成可旋轉素材</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/danielwh2/sprite-stacking（建立：2026-11-20">https://github.com/danielwh2/sprite-stacking（建立：2026-11-20</a>）</li>
+<li>來源重點：Agent skill，把四個像素視圖做成可旋轉的假 3D sprite。MIT，可用 <code>npx skills add</code> 裝進 Claude Code、Codex、Cursor，約 770 星。</li>
+<li>為什麼值得做：獨立遊戲與電商都要可轉的商品圖，請畫師出一圈視圖很貴。</li>
+<li>產品構想：上傳四視角，產出可嵌網頁的旋轉素材與透明 GIF。遊戲素材包與商品主圖兩條計費。</li>
+<li>難度與切入點：低中。先做網頁上傳與預覽，不做完整遊戲編輯器。</li>
+</ul>
+<h2>7.【WP】可分支、可回到過去的 WordPress 資料庫</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/tsukinowasha/heimdb（建立：2026-11-20">https://github.com/tsukinowasha/heimdb（建立：2026-11-20</a>）</li>
+<li>來源重點：對 WordPress 假裝自己是 MySQL 8.0。可開不複製資料的 staging 分支、看 diff 再合併，也可用 <code>AS OF</code> 讀過去某個時間點。2026-11-21 發了 v0.3.1。星數仍少，但是完整產品形狀，不是清單。</li>
+<li>為什麼值得做：客戶站改版最怕動到正式資料，現有備份外掛做不到「立刻開一條分支」。</li>
+<li>產品構想：維運商用的分支資料庫：一鍵開客戶預覽站、合併時保留正式站新來的留言與使用者，並避免覆蓋網址。</li>
+<li>難度與切入點：高。先做「開分支＋還原到某時間＋合併報告」，賣給已經在管多站的工作室。</li>
+</ul>
+<h2>8.【WP】外掛與佈景主題的 WordPress.org 發佈管家</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/mahbubur001/releasedock（建立：2026-11-22">https://github.com/mahbubur001/releasedock（建立：2026-11-22</a>）</li>
+<li>來源重點：macOS 原生 App，把 ZIP 或原始碼資料夾檢查、預覽、提交到 WordPress.org SVN，並在提交後驗證。2026-11-24 發了 v0.2.2，README 寫有 210 個測試。星數仍少。</li>
+<li>為什麼值得做：外掛作者每次發版都在手動對 trunk、tags 與 readme，容易漏檔或發錯版。</li>
+<li>產品構想：做成團隊可共用的發佈管線，不限 Mac：PR 合併後自動檢查 readme、截圖與版本號，通過才推上 WordPress.org，並留下可給客戶看的發佈紀錄。</li>
+<li>難度與切入點：中。先做檢查與預覽，不先做自動提交；鎖定已有 svn 帳號的外掛作者。</li>
+</ul></section>
+<footer>由 Grok Bot 每日自動彙整外部資訊。時間皆為台北時間。</footer></main></body></html>
