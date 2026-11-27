@@ -1,0 +1,61 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>每日外部資訊 2026-11-27</title>
+<link rel="stylesheet" href="style.css"></head><body><main><header class="site"><a href="index.html">每日外部資訊｜2026-11-27（五）</a><nav class="days"><a href="2026-11-26.html">← 2026-11-26</a><a href="index.html">全部日期</a></nav></header><div class="toc"><a href="#github">GitHub 熱門 × 產品點子</a></div><section class="src" id="github"><h2 class="src-title">GitHub 熱門 × 產品點子</h2><h1>GitHub 熱門 × WP／SaaS idea 早報｜2026-11-27</h1>
+<p>今天 Trending 日榜、週榜幾乎都是已報過的專案，或建立超過 30 天的老牌專案（nginx、openvino、AFFiNE、obsidian-skills）。近 3 天星數衝高的名單裡，大量是遊戲移植、模擬器，以及「某軟體 for Windows 10/11」的空殼倉庫，已排除。下面 7 則來自近 3 天新建的產品形 repo，加上一個近 14 天新建、星數過千的推論引擎。</p>
+<h2>1. 品牌活動的小遊戲改裝工作室</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/nexu-io/opengame（建立：2026-11-25">https://github.com/nexu-io/opengame（建立：2026-11-25</a>）</li>
+<li>來源重點：給 coding agent 的開源遊戲工作室。內建可玩模板，能改風格、測試，再發布到微信、抖音、TikTok、Telegram、itch.io。Apache-2.0，約 825 星。</li>
+<li>為什麼值得做：活動公司每次都為一次檔期重做小遊戲，引擎與上架規格卻每次都不一樣。</li>
+<li>產品構想：不做另一個遊戲引擎。客戶選一個模板、換品牌色與獎項規則，你交出可嵌進活動頁的包，以及「誰玩完、誰領過」的紀錄。按檔期計費。</li>
+<li>難度與切入點：中。先做一種直式小遊戲與一個發布目標，不做 3D 編輯器。</li>
+</ul>
+<h2>2. 個資刪除的月報，不是一支生氣的腳本</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/gary23w/f-ck_data_brokers（建立：2026-11-26">https://github.com/gary23w/f-ck_data_brokers（建立：2026-11-26</a>）</li>
+<li>來源重點：Show HN 當天約 200 分。單檔 Python，在自己的電腦上對資料仲介送出退出與刪除要求，資料不離本機。MIT，約 355 星。作者另有付費代辦。</li>
+<li>為什麼值得做：刪除要求要對很多站重複送、被拒絕再追，個人做一次就放棄。台灣也開始有人搜與外洩通知，但沒有固定的追蹤。</li>
+<li>產品構想：代辦合法的退出與刪除，每月回一份「哪些站還看得到你、哪些已關閉」。只處理當事人自己的資料，不對站點施壓或繞過拒絕。按人／月計費。</li>
+<li>難度與切入點：中。先做 10 個台灣常見的公開名錄，用信件與表單狀態當產品，不先做全自動對 600 家公司。</li>
+</ul>
+<h2>3. 會先問再做的團隊常駐助理</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/langchain-samples/Persistent-Agent（建立：2026-11-24">https://github.com/langchain-samples/Persistent-Agent（建立：2026-11-24</a>）</li>
+<li>來源重點：掛在 Slack 的常駐助理。記得每個人的偏好、追目標、夜間整理記憶，背景跑手冊，但對外動作前會先出現在對話裡。MIT，約 142 星。</li>
+<li>為什麼值得做：工作室已經有很多 agent，缺的是「早上先看簡報、要發信或改檔案前先點頭」的那一層。</li>
+<li>產品構想：給 5 到 20 人團隊的早報與待辦。接行事曆與信箱，只在被點名或手冊允許時發言。寄信、改檔、下單都要人核准。可改接到 LINE 官方帳號，而不是再做一個聊天 App。</li>
+<li>難度與切入點：中。先做早報與一個核准佇列，不做「看過所有頻道就插話」。</li>
+</ul>
+<h2>4. 開頁就能並排看三種瀏覽器</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/michidk/sidebyside（建立：2026-11-25">https://github.com/michidk/sidebyside（建立：2026-11-25</a>）</li>
+<li>來源重點：Show HN 約 108 分。在同一個分頁裡用 WebAssembly 開 Linux VM，並排跑 Firefox、Chromium、Epiphany，沒有後端。約 48 星，星數還低，但產品形狀清楚。</li>
+<li>為什麼值得做：交站前要對 Chrome、Firefox、Safari 看版面，BrowserStack 對接案來說太貴，本機又常常沒裝齊。</li>
+<li>產品構想：貼一個預覽網址，產出三種引擎的並排截圖與差異標記，附「客戶看過的版本」。賣給做官網與活動頁的工作室，按站計費。比對結果留在客戶的預覽環境。</li>
+<li>難度與切入點：中高。先做桌面寬度的截圖差異，不做可互動的遠端瀏覽器農場。</li>
+</ul>
+<h2>5. 沒有 GPU 的 OpenAI 相容端點</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/opensetlabs/openset-llm（建立：2026-11-13">https://github.com/opensetlabs/openset-llm（建立：2026-11-13</a>）</li>
+<li>來源重點：近 14 天新建、星數過千。純 CPU、8GB 記憶體跑本機推論，提供 OpenAI 相容介面。作者稱 8 核機器上一個 27B 模型約每秒 17 到 20 token。MIT，約 1731 星。</li>
+<li>為什麼值得做：很多客戶的資料不能出機房，但又租不到 GPU。現成的推論套件在小 VPS 上跑不動。</li>
+<li>產品構想：在客戶既有的 Linux VPS 上裝一個相容端點，附模型選擇、用量與當機重啟。賣的是「能接上現有工具的內網位址」，不是另一個聊天視窗，也不做模型訓練。</li>
+<li>難度與切入點：高。先支援一種模型與一種機器規格，用現成的相容 API 當契約。</li>
+</ul>
+<h2>6. 通稿脫水，給要轉寄前看過的人</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/duyunzhoudyz/dyz-plain-talk-decoder（建立：2026-11-24">https://github.com/duyunzhoudyz/dyz-plain-talk-decoder（建立：2026-11-24</a>）</li>
+<li>來源重點：中文 agent skill。把文章、通稿、貼文改寫成「事實、對方想讓你做什麼、哪些還沒查到」。高風險主題只列該問的問題，不代下決定。MIT，約 70 星。</li>
+<li>為什麼值得做：公關、投資人與編輯每天收一堆通稿，轉寄前沒有人有空核對數字與沒寫出來的條件。</li>
+<li>產品構想：貼一篇稿，回一份可轉寄的短箋：留下的數字、缺的條件、未查證的句子。醫療、投資、法律只標「要問誰」，不給結論。按篇或按席次計費。</li>
+<li>難度與切入點：低中。先做貼文字，不做任意連結抓取，也不把個人背景寫進分享頁。</li>
+</ul>
+<h2>7.【WP】先試跑、可切回的執行層，而不是整站搬家</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/hyscaler/HyScribe（建立：2026-11-25">https://github.com/hyscaler/HyScribe（建立：2026-11-25</a>）</li>
+<li>來源重點：用 Rust 寫的 WordPress 執行層。指向既有資料庫與 wp-content，網址與資料留在原地，PHP 版仍可讀同一顆資料庫，所以可以切回去。AGPL-3.0，約 45 星。作者自己標明尚未可上正式站，也還沒有外部安全稽核。</li>
+<li>為什麼值得做：2026 年 10 月的 PHP runtime 事件說明，風險可以出在 PHP 本身，不一定是外掛。但多數站不能為了這個就整站遷到別的 CMS。</li>
+<li>產品構想：不要賣「換掉 WordPress」。賣的是試運行報告：同一份資料在新執行層上，哪些網址、外掛與後台會壞，以及一鍵切回的檢查清單。正式切換另計，且要等上游可上線。</li>
+<li>難度與切入點：高。先做唯讀比對與差異報告，不承接正式流量，也不把未稽核的執行層裝進客戶的正式機。</li>
+</ul></section>
+<footer>由 Grok Bot 每日自動彙整外部資訊。時間皆為台北時間。</footer></main></body></html>
