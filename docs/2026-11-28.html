@@ -1,0 +1,61 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>每日外部資訊 2026-11-28</title>
+<link rel="stylesheet" href="style.css"></head><body><main><header class="site"><a href="index.html">每日外部資訊｜2026-11-28（六）</a><nav class="days"><a href="2026-11-27.html">← 2026-11-27</a><a href="index.html">全部日期</a></nav></header><div class="toc"><a href="#github">GitHub 熱門 × 產品點子</a></div><section class="src" id="github"><h2 class="src-title">GitHub 熱門 × 產品點子</h2><h1>GitHub 熱門 × WP／SaaS idea 早報｜2026-11-28</h1>
+<p>今天 Trending 日榜、週榜幾乎都是已報過的專案，或建立超過 30 天的老牌專案（nginx、openvino、AFFiNE）。近 3 天星數衝高的名單裡，大量是遊戲移植、模擬器，以及同一天建立的 Windows 空殼倉庫，已排除。也排除 exploit／PoC，以及用「WordPress 佈景」包裝、卻要求用 PowerShell 安裝的倉庫。下面 7 則來自近 3 天到近一週新建的產品形 repo。</p>
+<h2>1. AI 搜尋能見度，留在客戶自己的 Cloudflare</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/ankurmans/caldrin-search-oss（建立：2026-11-25">https://github.com/ankurmans/caldrin-search-oss（建立：2026-11-25</a>）</li>
+<li>來源重點：SEO／AI 能見度平台，附 MCP。可自架在 Cloudflare，金鑰用自己的。AGPL-3.0，約 141 星。同日有 v0.1.27。</li>
+<li>為什麼值得做：客戶開始問「ChatGPT 會不會提到我們」，現成排名工具多半要把關鍵字與頁面送去別人的雲。</li>
+<li>產品構想：不做另一個排名儀表板。每月交一份「AI 回答裡有沒有你、引用的是哪一頁」短報，查詢跑在客戶自己的 Cloudflare。沒查到就寫沒查到，不代寫排名保證。</li>
+<li>難度與切入點：中。先做 5 個問句、一個月報，不先做全自動改稿。</li>
+</ul>
+<h2>2. 官方統計用問句查，數字要能對回資料表</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/es-ine/mcp（建立：2026-11-26">https://github.com/es-ine/mcp（建立：2026-11-26</a>）</li>
+<li>來源重點：西班牙國家統計局（INE）的 MCP。用自然語言查公開的人口、經濟與社會統計。EUPL-1.2，約 202 星。同日發布 v1.0.0。</li>
+<li>為什麼值得做：顧問與編輯要引用主計、勞動、商業統計時，常把表格貼進聊天視窗，事後對不到原始表。</li>
+<li>產品構想：只接政府開放資料。問一句，回數字、資料表名稱、更新日期與連結。賣給要寫產業簡報的工作室，按席次計費。不接非公開資料庫，也不代填預測。</li>
+<li>難度與切入點：低中。先接主計總處與政府資料開放平臺各一個常用表，不做「全台灣所有開放資料」。</li>
+</ul>
+<h2>3. 一張定妝圖的角色轉台</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/Arekejoker/sprite-turntable（建立：2026-11-27">https://github.com/Arekejoker/sprite-turntable（建立：2026-11-27</a>）</li>
+<li>來源重點：從一張定妝圖做到可拖動的 360° 角色轉台，含透明素材、製作流程與離線展示頁。MIT，約 225 星。同日 v1.0.0。</li>
+<li>為什麼值得做：插畫、周邊與獨立遊戲要在商品頁轉一圈給人看，每次都重做一組序列圖。</li>
+<li>產品構想：客戶上傳一張定妝圖，你交一個可嵌進商品頁的轉台，以及「這是哪一版圖」的紀錄。按角色計費。做不出乾淨邊緣就退回，不假裝已經轉完。</li>
+<li>難度與切入點：中。先做一種直立角色與一個嵌入碼，不做全身動作編輯器。</li>
+</ul>
+<h2>4. 交出可改的投影片，不是一張圖</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/123zhaozheng/SlideForge（建立：2026-11-26">https://github.com/123zhaozheng/SlideForge（建立：2026-11-26</a>）</li>
+<li>來源重點：把文件、想法或平面的 AI 投影片，做成可在 PowerPoint 裡改的 .pptx。作者的做法是分批元件表，再組回 OOXML。MIT，約 71 星。</li>
+<li>為什麼值得做：提案簡報最常卡在「AI 生了一張很漂亮的圖，客戶要改一句話卻改不了」。</li>
+<li>產品構想：不做另一個簡報聊天視窗。客戶丟大綱，你交一份可改文字與順序的 pptx，並標哪些句子還沒核對。按份計費。醫療、投資、法律只留問題，不代下結論。</li>
+<li>難度與切入點：中。先支援一種版型與 10 頁以內，不先做動畫與母片市場。</li>
+</ul>
+<h2>5. 區網語音助理，對話不送出</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/yes999zc/home-mate（建立：2026-11-22">https://github.com/yes999zc/home-mate（建立：2026-11-22</a>）</li>
+<li>來源重點：自架的家用語音助理。Rust 與 Vue，可做精簡版，語音串流、多房間、區網發現。AGPL-3.0，約 102 星。2026-11-27 有 v0.3.4。</li>
+<li>為什麼值得做：診所、教室與小工作室想用語音叫待辦，但不能把對話送到外面的助理。</li>
+<li>產品構想：賣的是裝在客戶區網裡的一台語音助理，以及「它聽過哪些房間、資料留在哪」的說明。不做成可以遠端偷聽的服務，也不代接客戶沒同意的麥克風。</li>
+<li>難度與切入點：中高。先做一個房間、三個指令（報時、念今日待辦、關掉），不做全屋監控。</li>
+</ul>
+<h2>6. 店家的本機短影音產線</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/animede/h3-creator-studio（建立：2026-11-22">https://github.com/animede/h3-creator-studio（建立：2026-11-22</a>）</li>
+<li>來源重點：本機的創作工作室，涵蓋影片、圖、音樂與短影音，並管理 8–96GB 顯示卡的記憶體。Apache-2.0，約 225 星。2026-11-27 發布 v1.2.0。</li>
+<li>為什麼值得做：餐飲與零售要每週短影音，但沒有顯示卡，也不想把未公開的菜單拍檔上傳到不認識的網站。</li>
+<li>產品構想：不賣另一個剪輯器。你代管一台放在店裡或你機房的產線：店家丟素材，拿回可發的短影音與使用的素材清單。模型與檔案用店家能合法使用的那一套。按月計費。</li>
+<li>難度與切入點：中高。先做一種直式模板與一個發布尺寸，不做音樂生成平台。</li>
+</ul>
+<h2>7.【WP】多站維運的共用工作台，而不是一支共用的 SSH 軟體</h2>
+<ul>
+<li>GitHub：<a href="https://github.com/520jiyue/RufeShell（建立：2026-11-25">https://github.com/520jiyue/RufeShell（建立：2026-11-25</a>）</li>
+<li>來源重點：用 Rust 與 Tauri 做的 FinalShell 替代。SSH、本機終端、遠端檔案、系統監控、指令紀錄、連接埠轉發與憑證存放。MIT，約 65 星。同日 v1.3.2。它不是 WordPress 外掛；值得做的是維運這層。</li>
+<li>為什麼值得做：接多個 WP 站的人，常把所有客戶的 SSH 放在某一台筆電的同一個軟體裡。人一離職，登入就說不清。</li>
+<li>產品構想：不做又一個終端機。賣給維護多站的工作室：每個人自己的登入、這次改了哪個檔、誰核准。客戶密碼不做成全員共用的一份。按站計費。</li>
+<li>難度與切入點：中。先做「誰在什麼時候連上哪一台」的紀錄與核准，不先做檔案總管。</li>
+</ul></section>
+<footer>由 Grok Bot 每日自動彙整外部資訊。時間皆為台北時間。</footer></main></body></html>
